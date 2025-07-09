@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trial slider puzzle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel ="stylesheet" href = "./game.css" />
+</head>
+<body>
+
+    <!-- game design -->
+    <div class="GameArea">
+        
+        <div class="counters">
+        <h4 class ="moves"> Moves : </h4>
+        <h4 class ="time"> Time : </h4>
+        </div>
+
+        <div class="game-container"> 
+            <div class="puzzle-board" id="puzzleboard"></div>
+        </div>
+
+        <div class="button">
+        <button class="button-one" title="Activate 15-sec hint"><img src="./Assets/icons/HintIcon.png" alt="Scoreboard" id="score-icon" /></button>
+        <button class="button-two" title ="scamble pieces"><img src="./Assets/icons/ResetIcon.png" alt="Scoreboard" id="score-icon" /></button>
+        <button class="button-three">choose another image</button>
+        <button class="button-four" title ="unmute sound"><img src="./Assets/icons/SoundOff.png" alt="Scoreboard" id="score-icon" /></button>
+        <button class="button-five" title ="dashboard" onclick="window.location.href='index.html'"><img src="./Assets/icons/HomeIcon.png" alt="Scoreboard" id="score-icon" /></button>
+        </div>
+
+    </div>
+
+    <script src="./dist/main.js" type="module"></script>
+</body>
+</html>

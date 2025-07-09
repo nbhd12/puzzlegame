@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trial slider puzzle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel ="stylesheet" href = "./dashboard.css" />
+</head>
+<body>
+
+    <!-- dashboard design -->
+    <div class="container">
+        <h1> Jig-saw </h1>
+        <!-- <h3>Affûte ton esprit et défie la logique ! <br> Glisse les tuiles, bouge vite, pense mieux, et reconstitue l’image avant les autres. <br> Chaque mouvement compte!</h3> -->
+        
+        <div class="animation-home">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+        </div>
+
+        <div class="button">
+        <button class="button-one" title="How to Play" id="modal"><img src="./Assets/icons/HowToPlayIcon.png" alt="HowToPlay" id="HowToPlay" /></button>
+        <button class="button-two" title="Mute Sound"><img src="./Assets/icons/SoundOn.png" alt="Scoreboard" id="score-icon" /></button>
+        <button class="button-three" onclick="window.location.href='game.html'"> start classic mode </button>
+        <button class="button-four" title="How to Play"><img src="./Assets/icons/ChatboxIcon.png" alt="Scoreboard" id="score-icon" /></button>
+        <button class="button-five" title="Highscores"><img src="./Assets/icons/HighscoreIcon.png" alt="Scoreboard" id="score-icon" /></button>
+        </div>
+
+    </div>
+
+    <div class = "popup-overlay" id="popup-overlay">
+        <div class="popup-content">        
+        <h2>How To Play Jig-saw</h2>
+        <p>Slide the puzzle pieces in correct sequence or to create an image! It is a bit casse-tete, but that is the fun!</p>
+        <button id="close-modal">close</button>
+        </div>
+    </div>
+
+    <script src="./dist/main.js" type="module"></script>
+</body>
+</html>   
