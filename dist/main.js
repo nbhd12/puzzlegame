@@ -99,6 +99,15 @@ function startTimer() {
 document.addEventListener("DOMContentLoaded", () => {
     startTimer(); // start as soon as page loads
 });
+// Shuffle Button
+const ShufflePieces = document.getElementById("ShufflePieces");
+ShufflePieces.addEventListener("click", () => {
+    shufflePuzzle();
+    renderPuzzle();
+});
+// Move Count
+// const 
+// constMoves = document."moveCount"
 // document.getElementById('modal')?.addEventListener('click', () => {
 //   document.getElementById('popup-overlay')!.style.display = 'flex';
 // });

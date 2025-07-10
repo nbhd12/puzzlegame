@@ -119,9 +119,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+// Shuffle Button
+
+const ShufflePieces = document.getElementById("ShufflePieces") as HTMLButtonElement;
+ShufflePieces.addEventListener("click",() => {
+  shufflePuzzle();
+renderPuzzle();
+})
+
+// Move Count
+// const 
 
 
 
+// constMoves = document."moveCount"
 
 
 
