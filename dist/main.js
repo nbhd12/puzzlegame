@@ -109,8 +109,9 @@ ShufflePieces.addEventListener("click", () => {
     shufflePuzzle();
     moveCount = 0;
     renderPuzzle();
+    shuffleSound.play();
 });
-//Popup
+//Popup Game Page
 const openbtn = document.getElementById('open');
 const modalContainer = document.getElementById('modalContainer');
 const closebtn = document.getElementById('close');
@@ -122,6 +123,28 @@ if (openbtn && modalContainer && closebtn) {
         modalContainer.classList.remove('show');
     });
 }
+//Popup Home Page
+const openbutton = document.getElementById('homeicon');
+const HomeContainer = document.getElementById('HomeContainer');
+const closebutton = document.getElementById('closeby');
+if (openbutton && HomeContainer && closebutton) {
+    openbutton.addEventListener('click', () => {
+        HomeContainer.classList.add('shew');
+    });
+    closebutton.addEventListener('click', () => {
+        HomeContainer.classList.remove('shew');
+    });
+}
 //win sound
 const winSound = new Audio('./Assets/Sounds/WinSound.mp3');
-winSound.volume = 0.4;
+winSound.volume = 0.1;
+//shuffle sound
+const shuffleSound = new Audio('./Assets/Sounds/HighScoresSound.mp3');
+//hoversound
+const hoverSound = new Audio('./Assets/Sounds/ButtonHoverSound.mp3');
+const Hover = document.getElementById('modal');
+if (Hover) {
+    Hover.addEventListener('mouseenter', () => {
+        hoverSound.play();
+    });
+}

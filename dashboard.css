@@ -120,122 +120,48 @@ background-color: #FE5140;
     font-weight: 100;
     cursor:url('./Assets/icons/02\ CursorCustom.png'), auto;
     box-shadow: 2px 2px 3px black;
-
 }
 
-.popup-overlay {
+
+.popupoverlay{
   position: fixed;
-  width: 100%;
-  height: 100%;
+  top:40%;
+  width: 400px;
+  opacity: 0;
+  pointer-events: none;
+  background-color: #fffdeeba;
+  border:4px solid #3A2D6E;
+  font-family:monospace;
+  font-size: 16px;
+  color: #3A2D6E;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  font-family: "Pixelify Sans";
-}
-
-
-.popup-content{
-  background: #fffdee;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 400px;
-  width: 90%;
-  text-align: center;
-}  
-
-
-.popup-content p {
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-
-
-#close-modal {
-  background: #1f1f1f;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
+  flex-direction: column;
+  gap: 10px;
   cursor: url('./Assets/icons/02\ CursorCustom.png'), auto;
-  margin-top: 15px;
-  font-size: 18px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: opacity 0.3s ease;
+}
+
+.popupoverlay.shew{
+  pointer-events: auto;
+  opacity: 1;
+}
+
+
+.PopupButton{
   font-family: "Pixelify Sans";
+  background-color: #3A2D6E;
+  height: 40px;
+  width: 80px;
+  border:4px solid #3A2D6E;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: url('./Assets/icons/02\ CursorCustom.png'), auto;
 }
 
-.close-modal:hover {
-  background: #0056b3;
-}
 
-
-
-
-
-
-/*.puzzle-board {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3px;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 3px;
-}
-
-.puzzle-piece {
-    background-size: 300px 300px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-}
-
-.puzzle-piece:hover {
-    transform: scale(1.05);
-}
-
-.puzzle-piece.empty {
-    background: rgba(255,255,255,0.1);
-    border: 2px dashed rgba(255,255,255,0.3);
-    cursor: default;
-}
-
-.puzzle-piece.empty:hover {
-    transform: none;
-}
-
-/* Image backgrounds - using individual piece images */
-/* .landscape-1 { 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    object-fit: fill;
-    background-image: url('./Assets/images/Frame\ 01.png')
-}
-
-.landscape-2 { 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* Fallback gradient if image not found */
-    /* background-color: #FF6347;
-}
-
-.landscape-3 { 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* Fallback gradient if image not found */
-    /*background-color: #4682B4;
-} */
 
 /* Landscape 1 pieces
 .landscape-1.piece-1 { background-image: url('./Assets/images/Frame\ 01.png'); }
@@ -247,69 +173,3 @@ background-color: #FE5140;
 .landscape-1.piece-7 { background-image: url('./Assets/images/Frame\ 07.png'); }
 .landscape-1.piece-8 { background-image: url('./Assets/images/Frame\ 08.png'); }
 
-/* Landscape 2 pieces */
-/*.landscape-2.piece-1 { background-image: url('./images/landscape2_piece1.jpg'); }
-.landscape-2.piece-2 { background-image: url('./images/landscape2_piece2.jpg'); }
-.landscape-2.piece-3 { background-image: url('./images/landscape2_piece3.jpg'); }
-.landscape-2.piece-4 { background-image: url('./images/landscape2_piece4.jpg'); }
-.landscape-2.piece-5 { background-image: url('./images/landscape2_piece5.jpg'); }
-.landscape-2.piece-6 { background-image: url('./images/landscape2_piece6.jpg'); }
-.landscape-2.piece-7 { background-image: url('./images/landscape2_piece7.jpg'); }
-.landscape-2.piece-8 { background-image: url('./images/landscape2_piece8.jpg'); } */
-
-/* Landscape 3 pieces */
-/*.landscape-3.piece-1 { background-image: url('./images/landscape3_piece1.jpg'); }
-.landscape-3.piece-2 { background-image: url('./images/landscape3_piece2.jpg'); }
-.landscape-3.piece-3 { background-image: url('./images/landscape3_piece3.jpg'); }
-.landscape-3.piece-4 { background-image: url('./images/landscape3_piece4.jpg'); }
-.landscape-3.piece-5 { background-image: url('./images/landscape3_piece5.jpg'); }
-.landscape-3.piece-6 { background-image: url('./images/landscape3_piece6.jpg'); }
-.landscape-3.piece-7 { background-image: url('./images/landscape3_piece7.jpg'); }
-.landscape-3.piece-8 { background-image: url('./images/landscape3_piece8.jpg'); } */
-
-/*.image-selector {
-    margin-bottom: 15px;
-}
-
-.image-option {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 3px solid transparent;
-    transition: all 0.3s;
-}
-
-.image-option:hover {
-    transform: scale(1.1);
-}
-
-.image-option.active {
-    border-color: #ffffff;
-}
-
-/* Win animation */
-/*@keyframes celebrate {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}*/
-
-/*.puzzle-board.win {
-    animation: celebrate 0.5s ease-in-out;
-}
-
-/* Hint mode styles */
-/*.puzzle-piece.show-hint {
-    color: white !important;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;
-    font-size: 24px !important;
-    font-weight: bold !important;
-}
-
-.puzzle-piece:not(.show-hint) {
-    color: transparent !important;
-    text-shadow: none !important;
-} */
