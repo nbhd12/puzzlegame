@@ -76,46 +76,52 @@ function checkWin() {
         }
     }
     if (isSolved) {
-        alert(`🎉 You won in ${moveCount} moves!`);
+        winSound.play();
+        alert(`Felicitations!🎉 You won in ${moveCount} moves!`);
+        shufflePuzzle();
+        moveCount = 0;
+        renderPuzzle();
     }
 }
 shufflePuzzle();
 renderPuzzle();
-//Timer Functionlaity
-let startTime;
-let timerInterval;
-function startTimer() {
-    startTime = Date.now();
-    timerInterval = setInterval(() => {
-        const now = Date.now();
-        const elapsed = now - startTime;
-        const seconds = Math.floor(elapsed / 1000);
-        const timeElement = document.querySelector(".time");
-        if (timeElement) {
-            timeElement.textContent = `Time : ${seconds}`;
-        }
-    }, 1000);
-}
-document.addEventListener("DOMContentLoaded", () => {
-    startTimer(); // start as soon as page loads
-});
+// //Timer Functionlaity
+// let startTime: number;
+// let timerInterval: number;
+// function startTimer() {
+//   startTime = Date.now();
+//   timerInterval = setInterval(() => {
+//     const now = Date.now();
+//     const elapsed = now - startTime;
+//     const seconds = Math.floor(elapsed / 1000);
+//     const timeElement = document.querySelector(".time");
+//     if (timeElement) {
+//       timeElement.textContent = `Time : ${seconds}`;
+//     }
+//   }, 1000);
+// }
+// document.addEventListener("DOMContentLoaded", () => {
+//   startTimer(); // start as soon as page loads
+// });
 // Shuffle Button
 const ShufflePieces = document.getElementById("ShufflePieces");
 ShufflePieces.addEventListener("click", () => {
     shufflePuzzle();
+    moveCount = 0;
     renderPuzzle();
 });
-// Move Count
-// const 
-// constMoves = document."moveCount"
-// document.getElementById('modal')?.addEventListener('click', () => {
-//   document.getElementById('popup-overlay')!.style.display = 'flex';
-// });
-// document.getElementById('close-modal')?.addEventListener('click', () => {
-//   document.getElementById('popup-overlay')!.style.display = 'none';
-// });
-// document.getElementById('popup-overlay')?.addEventListener('click', (e) => {
-//   if (e.target === document.getElementById('popup-overlay')) {
-//     document.getElementById('popup-overlay')!.style.display = 'none';
-//   }
-// });
+//Popup
+const openbtn = document.getElementById('open');
+const modalContainer = document.getElementById('modalContainer');
+const closebtn = document.getElementById('close');
+if (openbtn && modalContainer && closebtn) {
+    openbtn.addEventListener('click', () => {
+        modalContainer.classList.add('show');
+    });
+    closebtn.addEventListener('click', () => {
+        modalContainer.classList.remove('show');
+    });
+}
+//win sound
+const winSound = new Audio('./Assets/Sounds/WinSound.mp3');
+winSound.volume = 0.4;

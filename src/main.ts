@@ -87,70 +87,68 @@ function checkWin(): void {
     }
   }
   if (isSolved) {
-    alert(`🎉 You won in ${moveCount} moves!`);
+    winSound.play();
+    alert(`Felicitations!🎉 You won in ${moveCount} moves!`);
+    shufflePuzzle();
+    moveCount = 0;
+    renderPuzzle();
   }
 }
 
 shufflePuzzle();
 renderPuzzle();
 
-//Timer Functionlaity
-let startTime: number;
-let timerInterval: number;
 
-function startTimer() {
-  startTime = Date.now();
 
-  timerInterval = setInterval(() => {
-    const now = Date.now();
-    const elapsed = now - startTime;
-    const seconds = Math.floor(elapsed / 1000);
+// //Timer Functionlaity
+// let startTime: number;
+// let timerInterval: number;
 
-    const timeElement = document.querySelector(".time");
-    if (timeElement) {
-      timeElement.textContent = `Time : ${seconds}`;
-    }
-  }, 1000);
-}
+// function startTimer() {
+//   startTime = Date.now();
 
-document.addEventListener("DOMContentLoaded", () => {
-  startTimer(); // start as soon as page loads
-});
+//   timerInterval = setInterval(() => {
+//     const now = Date.now();
+//     const elapsed = now - startTime;
+//     const seconds = Math.floor(elapsed / 1000);
 
+//     const timeElement = document.querySelector(".time");
+//     if (timeElement) {
+//       timeElement.textContent = `Time : ${seconds}`;
+//     }
+//   }, 1000);
+// }
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   startTimer(); // start as soon as page loads
+// });
 
 
 // Shuffle Button
-
 const ShufflePieces = document.getElementById("ShufflePieces") as HTMLButtonElement;
 ShufflePieces.addEventListener("click",() => {
   shufflePuzzle();
-renderPuzzle();
+  moveCount = 0;
+  renderPuzzle();
 })
 
-// Move Count
-// const 
+
+//Popup
+const openbtn = document.getElementById('open') as HTMLButtonElement | null;
+const modalContainer = document.getElementById('modalContainer') as HTMLElement | null;
+const closebtn = document.getElementById('close') as HTMLButtonElement | null;
+
+if (openbtn && modalContainer && closebtn) {
+  openbtn.addEventListener('click', () => {
+    modalContainer.classList.add('show');
+  });
+
+  closebtn.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
+  });
+}
 
 
-
-// constMoves = document."moveCount"
-
-
-
-
-
-
-
-
-// document.getElementById('modal')?.addEventListener('click', () => {
-//   document.getElementById('popup-overlay')!.style.display = 'flex';
-// });
-
-// document.getElementById('close-modal')?.addEventListener('click', () => {
-//   document.getElementById('popup-overlay')!.style.display = 'none';
-// });
-
-// document.getElementById('popup-overlay')?.addEventListener('click', (e) => {
-//   if (e.target === document.getElementById('popup-overlay')) {
-//     document.getElementById('popup-overlay')!.style.display = 'none';
-//   }
-// });
+//win sound
+const winSound = new Audio('./Assets/Sounds/WinSound.mp3');
+winSound.volume= 0.4;

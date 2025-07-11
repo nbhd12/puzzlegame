@@ -14,23 +14,22 @@ body {
     cursor: url('./Assets/icons/02\ CursorCustom.png'), auto;
 }
 
-.counters {
+/* .counters {
     display: none;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
+} */
 
-h4 {
-    color: aliceblue;
+h2{
+    color: #3A2D6E;
     font-family: 'Pixelify Sans';
     font-weight: 100;
-    text-decoration: underline;
 }
 
 
 .game-container {
-  width: auto;
+  width: 510px;
   height: 300px;
   display: flex;
   justify-content: center;
@@ -42,6 +41,7 @@ h4 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
 }
 
 #puzzleboard {
@@ -141,4 +141,44 @@ background-color: #FE5140;
     cursor:url('./Assets/icons/02\ CursorCustom.png'), auto;
     box-shadow: 2px 2px 3px black;
 
+}
+
+
+.PopupButton{
+  font-family: "Pixelify Sans";
+  background-color: #3A2D6E;
+  height: 40px;
+  width: 80px;
+  border:4px solid #3A2D6E;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: url('./Assets/icons/02\ CursorCustom.png'), auto;
+}
+
+.modalcontainer{
+  position: fixed;
+  top:30%;
+  opacity: 0;
+  pointer-events: none;
+  background-color: #fffdeeba;
+  border:4px solid #3A2D6E;
+  font-family:monospace;
+  font-size: 16px;
+  color: #3A2D6E;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: url('./Assets/icons/02\ CursorCustom.png'), auto;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: opacity 0.3s ease;
+  /* width: 650px; */
+  /* height: 200px; */
+}
+
+
+.modalcontainer.show{
+  pointer-events: auto;
+  opacity: 1;
 }

@@ -14,17 +14,17 @@
     <!-- game design -->
     <div class="GameArea">
         
-        <div class="counters">
+        <!-- <div class="counters">
         <h4 id ="moves"> Moves : </h4>
         <h4 class ="time"> Time : </h4>
-        </div>
+        </div> -->
 
         <div class="game-container"> 
             <div class="puzzle-board" id="puzzleboard"></div>
         </div>
 
         <div class="button">
-        <button class="button-one" title="Activate 15-sec hint"><img src="./Assets/icons/HintIcon.png" alt="Scoreboard" id="score-icon" /></button>
+        <button class="button-one" title="Seeming Difficult?" id="open"><img src="./Assets/icons/HintIcon.png" alt="GameAdvice"  /></button>
         <button class="button-two" title ="scamble pieces" id="ShufflePieces"><img src="./Assets/icons/ResetIcon.png" alt="Scoreboard" id="score-icon" /></button>
         <button class="button-three">change theme</button>
         <button class="button-four" title ="unmute sound"><img src="./Assets/icons/SoundOff.png" alt="Scoreboard" id="score-icon" /></button>
@@ -32,6 +32,16 @@
         </div>
 
     </div>
+
+    <div class="modalcontainer" id="modalContainer">
+        <div class="modal">
+            <h2>Feeling Difficult?</h2>
+            <p> Some combinations might not be the right for you! <br> Press the <img src="./Assets/icons/ResetIcon.png"></img> to get a new combination! </p>
+            <button class="PopupButton" id="close"> Close </button>
+        </div>
+    </div>
+
+
 
     <script src="./dist/main.js" type="module"></script>
 </body>
