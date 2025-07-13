@@ -1,3 +1,6 @@
+## 🖼️ Preview
+
+![Game Screenshot](./Assets/images/GamePage.png)
 # Jigsaw – Puzzle Glissant
 
 Bienvenue dans le jeu Jigsaw !
