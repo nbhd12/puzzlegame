@@ -1,7 +1,4 @@
 ## 🖼️ Preview
-![Game Screenshot](./Assets/images/HomePage.png)
-![Game Screenshot](./Assets/images/GamePage.png)
-
 <p>
   <img src="./Assets/images/HomePage.png" width="45%">
   <img src="./Assets/images/GamePage.png" width="45%">
