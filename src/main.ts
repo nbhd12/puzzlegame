@@ -150,36 +150,9 @@ if (openbtn && modalContainer && closebtn) {
 }
 
 
-//Popup Home Page
-const openbutton = document.getElementById('homeicon') as HTMLButtonElement | null;
-const HomeContainer = document.getElementById('HomeContainer') as HTMLElement | null;
-const closebutton = document.getElementById('closeby') as HTMLButtonElement | null;
-
-if (openbutton && HomeContainer && closebutton) {
-  openbutton.addEventListener('click', () => {
-    HomeContainer.classList.add('shew');
-  });
-
-  closebutton.addEventListener('click', () => {
-    HomeContainer.classList.remove('shew');
-  });
-}
-
-
-
 //win sound
 const winSound = new Audio('./Assets/Sounds/WinSound.mp3');
 winSound.volume= 0.1;
 
 //shuffle sound
-const shuffleSound = new Audio('./Assets/Sounds/HighScoresSound.mp3');
-
-//hoversound
-const hoverSound = new Audio('./Assets/Sounds/ButtonHoverSound.mp3');
-
-const Hover = document.getElementById('modal');
-if (Hover) {
-  Hover.addEventListener('mouseenter', () => {
-    hoverSound.play();
-  });
-}
+const shuffleSound = new Audio('./Assets/Sounds/ShuffleSound.mp3');
