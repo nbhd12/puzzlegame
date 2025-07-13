@@ -1,5 +1,5 @@
 ## 🖼️ Preview
-
+![Game Screenshot](./Assets/images/HomePage.png)
 ![Game Screenshot](./Assets/images/GamePage.png)
 # Jigsaw – Puzzle Glissant
 
