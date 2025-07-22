@@ -1,7 +1,7 @@
-## 🖼️ Preview
-<p>
-  <img src="./Assets/images/HomePage.png" width="45%">
-  <img src="./Assets/images/Puzzle Gif Jigsaw.gif" height="85%">
+## 🖼️ Preview<p>
+  <p>
+  <img src="./Assets/images/HomePage.png" height="300">
+  <img src="./Assets/images/Puzzle Gif Jigsaw.gif" height="300">
 </p>
 
 # Jigsaw – Puzzle Glissant
